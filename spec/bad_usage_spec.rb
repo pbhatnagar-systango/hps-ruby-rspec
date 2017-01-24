@@ -2,7 +2,7 @@
 require 'spec_helper'
 require_relative 'actionwords'
 
-describe 'Weird specs' do
+describe 'Bad usage' do
   include Actionwords
 
   it "Full grounds does not block coffee" do

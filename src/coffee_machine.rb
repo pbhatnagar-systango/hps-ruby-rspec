@@ -1,5 +1,5 @@
 class CoffeeMachine
-  attr_reader :coffee_served
+  attr_reader :coffee_served, :started
 
   def initialize
     @started = false
@@ -10,6 +10,10 @@ class CoffeeMachine
     empty_grounds()
 
     @coffee_served = false
+
+    @water_hardness = 2
+    @grinder = "medium"
+    @settings_displayed = false
   end
 
   def start(lang = 'en')
@@ -27,13 +31,15 @@ class CoffeeMachine
         tank: 'Fill tank',
         beans: 'Fill beans',
         grounds: 'Empty grounds',
-        ready: 'Ready'
+        ready: 'Ready',
+        settings: "Settings:\n - 1: water hardness\n - 2: grinder"
       },
       fr: {
         tank: 'Remplir reservoir',
         beans: 'Ajouter grains',
         grounds: 'Vider marc',
-        ready: 'Pret'
+        ready: 'Pret',
+        settings: "Settings:\n - 1: durete de l'eau\n - 2: mouture"
       }
     }
     return i18n[@lang]
@@ -42,10 +48,26 @@ class CoffeeMachine
   def message
     return '' unless @started
 
+    return messages[:settings] if @settings_displayed
     return messages[:tank] if @tank_content <= 10
     return messages[:beans] if @beans_content < 3
     return messages[:grounds] if @grounds_content >= 30
     return messages[:ready]
+  end
+
+  def show_settings
+    @settings_displayed = true
+  end
+
+  def quit_settings
+    @settings_displayed = false
+  end
+
+  def get_settings
+    {
+      'water hardness': @water_hardness,
+      'grinder': @grinder
+    }
   end
 
   def take_coffee
