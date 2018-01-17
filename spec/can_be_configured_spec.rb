@@ -6,6 +6,7 @@ describe 'Can be configured' do
   include Actionwords
 
   it "Display settings" do
+    # Tags: priority:medium
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # When I switch to settings mode
@@ -15,12 +16,12 @@ describe 'Can be configured' do
   end
 
   it "Default settings" do
+    # Tags: priority:high
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # When I switch to settings mode
     i_switch_to_settings_mode
-    # Then settings should be: "| water hardness | 2      |
-    # | grinder        | medium |"
+    # Then settings should be:
     settings_should_be("| water hardness | 2      |\n| grinder        | medium |")
   end
 end

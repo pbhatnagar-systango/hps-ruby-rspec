@@ -7,6 +7,7 @@ describe 'Serve coffee' do
 
   it "Simple use" do
     # Well, sometimes, you just get a coffee.
+    # Tags: priority:high
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # When I take a coffee

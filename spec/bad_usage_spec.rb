@@ -7,6 +7,7 @@ describe 'Bad usage' do
 
   it "Full grounds does not block coffee" do
     # You keep getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
+    # Tags: priority:low
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # And I handle everything except the grounds
