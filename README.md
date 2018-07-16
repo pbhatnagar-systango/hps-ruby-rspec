@@ -3,7 +3,7 @@
 
 Hiptest publisher samples with Ruby/Rspec
 
-In this repository you'll find tests generated in Ruby/Rspec format from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
+In this repository you'll find tests generated in Ruby/Rspec format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
 The goals are:
 
