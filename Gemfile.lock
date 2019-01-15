@@ -34,7 +34,7 @@ DEPENDENCIES
   rspec_junit_formatter!
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.5.3p105
 
 BUNDLED WITH
-   1.13.6
+   1.17.1

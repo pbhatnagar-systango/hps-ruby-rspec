@@ -6,6 +6,7 @@ describe 'Support internationalisation' do
   include Actionwords
 
   it "No messages are displayed when machine is shut down" do
+    # Tags: priority:1
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # When I shutdown the coffee machine
@@ -17,6 +18,7 @@ describe 'Support internationalisation' do
   context "Messages are based on language" do
     def messages_are_based_on_language(language, ready_message)
       # Well, sometimes, you just get a coffee.
+      # Tags: priority:1
       # When I start the coffee machine using language "<language>"
       i_start_the_coffee_machine_using_language_lang(language)
       # Then message "<ready_message>" should be displayed
