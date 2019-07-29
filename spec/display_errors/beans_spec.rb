@@ -13,7 +13,7 @@ describe 'Beans' do
   end
 
   it "Message \"Fill beans\" is displayed after 38 coffees are taken" do
-    # Tags: priority:0
+    # Tags: priority:high
     # When I take "38" coffees
     i_take_coffee_number_coffees(38)
     # Then message "Fill beans" should be displayed
@@ -21,7 +21,7 @@ describe 'Beans' do
   end
 
   it "It is possible to take 40 coffees before there is really no more beans" do
-    # Tags: priority:2
+    # Tags: priority:low
     # When I take "40" coffees
     i_take_coffee_number_coffees(40)
     # Then coffee should be served
@@ -35,7 +35,7 @@ describe 'Beans' do
   end
 
   it "After adding beans, the message \"Fill beans\" disappears" do
-    # Tags: priority:0
+    # Tags: priority:high
     # When I take "40" coffees
     i_take_coffee_number_coffees(40)
     # And I fill the beans tank

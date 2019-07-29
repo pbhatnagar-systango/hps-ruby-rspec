@@ -13,7 +13,7 @@ describe 'Water' do
   end
 
   it "Message \"Fill water tank\" is displayed after 50 coffees are taken" do
-    # Tags: priority:0
+    # Tags: priority:high
     # When I take "50" coffees
     i_take_coffee_number_coffees(50)
     # Then message "Fill tank" should be displayed
@@ -21,7 +21,7 @@ describe 'Water' do
   end
 
   it "It is possible to take 10 coffees after the message \"Fill water tank\" is displayed" do
-    # Tags: priority:2
+    # Tags: priority:low
     # When I take "60" coffees
     i_take_coffee_number_coffees(60)
     # Then coffee should be served
@@ -33,7 +33,7 @@ describe 'Water' do
   end
 
   it "When the water tank is filled, the message disappears" do
-    # Tags: priority:0
+    # Tags: priority:high
     # When I take "55" coffees
     i_take_coffee_number_coffees(55)
     # And I fill the water tank

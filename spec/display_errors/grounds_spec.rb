@@ -13,7 +13,7 @@ describe 'Grounds' do
   end
 
   it "Message \"Empty grounds\" is displayed after 30 coffees are taken" do
-    # Tags: priority:0
+    # Tags: priority:high
     # When I take "30" coffees
     i_take_coffee_number_coffees(30)
     # Then message "Empty grounds" should be displayed
@@ -21,7 +21,7 @@ describe 'Grounds' do
   end
 
   it "When the grounds are emptied, message is removed" do
-    # Tags: priority:1
+    # Tags: priority:medium
     # When I take "30" coffees
     i_take_coffee_number_coffees(30)
     # And I empty the coffee grounds

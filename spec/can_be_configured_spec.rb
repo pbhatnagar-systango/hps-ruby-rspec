@@ -6,7 +6,7 @@ describe 'Can be configured' do
   include Actionwords
 
   it "Display settings" do
-    # Tags: priority:1
+    # Tags: priority:medium
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # When I switch to settings mode
@@ -16,7 +16,7 @@ describe 'Can be configured' do
   end
 
   it "Default settings" do
-    # Tags: priority:0
+    # Tags: priority:high
     # Given the coffee machine is started
     the_coffee_machine_is_started
     # When I switch to settings mode
